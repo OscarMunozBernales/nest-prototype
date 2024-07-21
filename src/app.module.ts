@@ -1,14 +1,9 @@
 import { Module } from '@nestjs/common';
+import { HealthCheckModule } from './components/health-check/health-check.module';
 
 @Module({
-  imports: []
+  imports: [
+    HealthCheckModule
+  ]
 })
-export class AppModule{
-  // configure( consumer: MiddlewareConsumer ) {
-  //   consumer
-  //     .apply(AuthMiddleware, RequireHeadersMiddleware)
-  //     .forRoutes(MarvelsController);
-  // }
-
-
-}
+export class AppModule{}
