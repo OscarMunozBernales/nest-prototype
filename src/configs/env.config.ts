@@ -1,11 +1,13 @@
+import { TIMEOUT } from "dns";
 import * as Joi from "joi";
 
-export const CENV: Record<string, any> = {
+export const configEnvironments: Record<string, any> = {
     cache: false,
     isGlobal: true,
     envFilePath: ['.env'],
     validationSchema: Joi.object({
-        port: Joi.number().required(),
-        base_path: Joi.string().required(),
+        PORT: Joi.number().required(),
+        TIMEOUT: Joi.number().required(),
+        BASE_PATH: Joi.string().required(),
     })
 }
