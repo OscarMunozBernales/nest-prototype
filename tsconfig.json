@@ -18,7 +18,18 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "paths": {
+      "@class/*": ["src/commons/class/*"],
+      "@constans/*": ["src/commons/constans/*"],
+      "@decorators/*": ["src/commons/decorators/*"],
+      "@enums/*": ["src/commons/enums/*"],
+      "@filters/*": ["src/commons/filters/*"],
+      "@guards/*": ["src/commons/guards/*"],
+      "@interceptors/*": ["src/commons/interceptors/*"],
+      "@interfaces/*": ["src/commons/interfaces*"],
+      "@middlewares/*": ["src/commons/middlewares/*"],
+      "@pipes/*": ["src/commons/pipes/*"],
       "@services/*": ["src/commons/services/*"],
+      "@config/*": ["src/configs/*"],
       
     }
 

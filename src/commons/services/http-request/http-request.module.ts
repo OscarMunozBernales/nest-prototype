@@ -1,8 +1,7 @@
 import { Module } from '@nestjs/common';
 import { HttpRequestService } from './http-request.service';
 import { HttpModule } from '@nestjs/axios';
-import { ConfigModule } from '@nestjs/config';
-import { configHttp } from 'src/configs';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 
 @Module({
   providers: [
@@ -11,7 +10,12 @@ import { configHttp } from 'src/configs';
   imports: [
     HttpModule.registerAsync({
       imports: [ ConfigModule ],
-      useFactory: configHttp
+      useFactory: async ( configService: ConfigService) => {
+        console.log(configService);
+        return {
+
+        }
+      }
     })
   ],
 })
